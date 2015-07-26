@@ -19,19 +19,32 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let textSignal:RACSignal = textField.rac_textSignal()
-        textSignal.subscribeNext {
-            (text: AnyObject!) -> Void in
-            let textString = text as! String
-            println(textString)
+        textSignal.subscribeNextAs { (text:String) -> () in
+            println(text)
         }
         
+
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
+extension RACSignal {
+    
+    func subscribeNextAs<T>(nextClosure:(T) -> ()) -> () {
+        self.subscribeNext {
+            (next: AnyObject!) -> () in
+            let nextAsT = next! as! T
+            nextClosure(nextAsT)
+        }
+    }
+    
+    
 }
 

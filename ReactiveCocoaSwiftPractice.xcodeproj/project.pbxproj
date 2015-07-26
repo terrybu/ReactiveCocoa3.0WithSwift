@@ -87,9 +87,7 @@
 		D918D1EF1B656FE2002222CE = {
 			isa = PBXGroup;
 			children = (
-				D959B24C1B657B050051A741 /* Result.framework */,
-				D959B2491B657AF50051A741 /* Box.framework */,
-				D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */,
+				D959B24F1B657C0B0051A741 /* Carthage Frameworks */,
 				D918D1FA1B656FE2002222CE /* ReactiveCocoaSwiftPractice */,
 				D918D2101B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests */,
 				D918D1F91B656FE2002222CE /* Products */,
@@ -141,6 +139,16 @@
 				D918D2121B656FE2002222CE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D959B24F1B657C0B0051A741 /* Carthage Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D959B24C1B657B050051A741 /* Result.framework */,
+				D959B2491B657AF50051A741 /* Box.framework */,
+				D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */,
+			);
+			name = "Carthage Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
