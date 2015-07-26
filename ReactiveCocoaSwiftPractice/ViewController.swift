@@ -11,12 +11,19 @@ import ReactiveCocoa
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var textField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-        
+        let textSignal:RACSignal = textField.rac_textSignal()
+        textSignal.subscribeNext {
+            (text: AnyObject!) -> Void in
+            let textString = text as! String
+            println(textString)
+        }
         
     }
 
