@@ -13,6 +13,8 @@
 		D918D2051B656FE2002222CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D918D2041B656FE2002222CE /* Images.xcassets */; };
 		D918D2081B656FE2002222CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D918D2061B656FE2002222CE /* LaunchScreen.xib */; };
 		D918D2141B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918D2131B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests.swift */; };
+		D959B2461B6579DA0051A741 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */; };
+		D959B2471B6579DA0051A741 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D959B2481B6579DA0051A741 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D959B2471B6579DA0051A741 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D918D1F81B656FE2002222CE /* ReactiveCocoaSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D918D1FC1B656FE2002222CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +52,7 @@
 		D918D20D1B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaSwiftPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D918D2121B656FE2002222CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D918D2131B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaSwiftPracticeTests.swift; sourceTree = "<group>"; };
+		D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D959B2461B6579DA0051A741 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		D918D1EF1B656FE2002222CE = {
 			isa = PBXGroup;
 			children = (
+				D959B2451B6579DA0051A741 /* ReactiveCocoa.framework */,
 				D918D1FA1B656FE2002222CE /* ReactiveCocoaSwiftPractice */,
 				D918D2101B656FE2002222CE /* ReactiveCocoaSwiftPracticeTests */,
 				D918D1F91B656FE2002222CE /* Products */,
@@ -122,6 +141,7 @@
 				D918D1F41B656FE2002222CE /* Sources */,
 				D918D1F51B656FE2002222CE /* Frameworks */,
 				D918D1F61B656FE2002222CE /* Resources */,
+				D959B2481B6579DA0051A741 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +362,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveCocoaSwiftPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +376,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveCocoaSwiftPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +439,7 @@
 				D918D2191B656FE2002222CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D918D21A1B656FE2002222CE /* Build configuration list for PBXNativeTarget "ReactiveCocoaSwiftPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +448,7 @@
 				D918D21C1B656FE2002222CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
